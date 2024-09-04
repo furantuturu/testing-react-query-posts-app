@@ -1,10 +1,10 @@
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import getPosts from './api/posts'
+import { useQuery } from '@tanstack/react-query'
+import { getPost } from './api/posts'
 
 export default function PostList({ id }) {
     const post = useQuery({
         queryKey: ["posts", id],
-        queryFn: () => getPosts(id)
+        queryFn: () => getPost(id)
     })
 
     if (post.isLoading) return <h1>Loading...</h1>
