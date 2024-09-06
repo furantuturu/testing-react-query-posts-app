@@ -1,2 +1,2 @@
 
-playing around with tanstack query/react query
+Playing around with tanstack query/react query
