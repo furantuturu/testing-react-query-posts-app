@@ -4,7 +4,14 @@ import { getPost } from './api/posts'
 export default function PostList({ id }) {
     const post = useQuery({
         queryKey: ["posts", id],
-        queryFn: () => getPost(id)
+        queryFn: () => getPost(id),
+        // initialData: { id: 1, title: "Fetching Data..." },
+        //* when you set initialData, thats saying its legit valid data
+        //* and its being stored in the cache 
+        //* and its no longer stale
+
+        placeholderData: { id: 1, title: "Fetching Data..." }
+        //* placeholder data will be immediately replaced by whatever your query is
     })
 
     if (post.isLoading) return <h1>Loading...</h1>
