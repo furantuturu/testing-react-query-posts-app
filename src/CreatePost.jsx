@@ -53,6 +53,7 @@ export default function CreatePost({ setCurrentPost }) {
         <>
             { createPostMutation.isError && JSON.stringify(createPostMutation.error) }
             <h1>Create Post</h1>
+            <hr />
             <form onSubmit={ handleSubmit }>
                 Title: <input type="text" ref={ titleRef } />
                 <br />
