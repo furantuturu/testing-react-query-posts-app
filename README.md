@@ -1,2 +1,2 @@
 
-Playing around with tanstack query/react query
+Playing around with [Tanstack Query/React Query](https://tanstack.com/query/latest)
